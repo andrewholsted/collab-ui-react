@@ -40,7 +40,7 @@ const Chip = ({className, leftContent, fileDownloadLink, fileType, rightContent,
     if (type === 'file' && fileDownloadLink) {
       return(
         <a
-          className="file-download"
+          className="cui-file-download"
           download
           href={fileDownloadLink}>
             <i className="icon icon-download_32"/>
@@ -77,8 +77,8 @@ Chip.propTypes = {
   fileType: PropTypes.oneOf(['audio', 'graph', 'image', 'locked', 'missing', 'pdf', 'spreadsheet', 'text', 'video', 'zip']),
   leftContent: PropTypes.node,
   subTitle: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['file', 'recording', 'unauthorized']).isRequired,
+  title: PropTypes.string,
+  type: PropTypes.oneOf(['file', 'recording', 'unauthorized']),
   fileDownloadLink: PropTypes.string,
   rightContent: PropTypes.node
 };
@@ -88,6 +88,8 @@ Chip.defaultProps = {
   fileType: null,
   leftContent: null,
   subTitle: '',
+  title: '',
+  type: '',
   fileDownloadLink: '',
   rightContent: null
 };

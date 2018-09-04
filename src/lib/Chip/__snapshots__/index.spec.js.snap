@@ -10,6 +10,7 @@ ShallowWrapper {
     leftContent={null}
     rightContent={null}
     subTitle=""
+    title=""
     type="recording"
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -45,6 +46,7 @@ ShallowWrapper {
         <div
           className="cui-chip-center"
         >
+          
           
         </div>,
         null,
@@ -103,14 +105,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            undefined,
+            "",
             "",
           ],
           "className": "cui-chip-center",
         },
         "ref": null,
         "rendered": Array [
-          undefined,
+          "",
           "",
         ],
         "type": "div",
@@ -146,6 +148,7 @@ ShallowWrapper {
           <div
             className="cui-chip-center"
           >
+            
             
           </div>,
           null,
@@ -204,14 +207,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              undefined,
+              "",
               "",
             ],
             "className": "cui-chip-center",
           },
           "ref": null,
           "rendered": Array [
-            undefined,
+            "",
             "",
           ],
           "type": "div",
