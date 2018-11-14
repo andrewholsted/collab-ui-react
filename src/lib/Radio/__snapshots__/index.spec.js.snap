@@ -12,7 +12,7 @@ ShallowWrapper {
     label=""
     name=""
     nestedLevel={0}
-    onChange={null}
+    onChange={[Function]}
     required={false}
     value=""
   />,
@@ -36,7 +36,7 @@ ShallowWrapper {
           disabled={false}
           id="test123"
           name=""
-          onChange={null}
+          onChange={[Function]}
           required={false}
           tabIndex={0}
           type="radio"
@@ -64,7 +64,7 @@ ShallowWrapper {
           "disabled": false,
           "id": "test123",
           "name": "",
-          "onChange": null,
+          "onChange": [Function],
           "required": false,
           "tabIndex": 0,
           "type": "radio",
@@ -105,7 +105,7 @@ ShallowWrapper {
             disabled={false}
             id="test123"
             name=""
-            onChange={null}
+            onChange={[Function]}
             required={false}
             tabIndex={0}
             type="radio"
@@ -133,7 +133,7 @@ ShallowWrapper {
             "disabled": false,
             "id": "test123",
             "name": "",
-            "onChange": null,
+            "onChange": [Function],
             "required": false,
             "tabIndex": 0,
             "type": "radio",

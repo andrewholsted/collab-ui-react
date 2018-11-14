@@ -164,9 +164,10 @@ DatePickerCalendar.contextTypes = {
 };
 
 DatePickerCalendar.propTypes = {
+  /** @prop Set the focus on the current date being focused | null */
+  focus: PropTypes.instanceOf(moment),
   /** @prop Sets the language for the DatePickerCalendar | 'en' */
   locale: PropTypes.string,
-  focus: PropTypes.instanceOf(moment),
   /** @prop Sets the last date in which the calendar does not disable | null */
   maxDate: PropTypes.instanceOf(Date),
   /** @prop Sets the first date in which the calendar does not disable | null */
@@ -180,8 +181,8 @@ DatePickerCalendar.propTypes = {
 };
 
 DatePickerCalendar.defaultProps = {
-  locale: 'en',
   focus: null,
+  locale: 'en',
   maxDate: null,
   minDate: null,
   monthFormat: 'MMMM YYYY',
