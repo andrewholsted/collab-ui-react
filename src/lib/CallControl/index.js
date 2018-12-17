@@ -29,7 +29,7 @@ class CallControl extends React.PureComponent {
         circle
         className={
           'cui-call-control' +
-          `${(type === 'cancel' && ` cui-call-control--cancel`) || ''}`+
+          `${(type === 'cancel' && ` cui-call-control--cancel`) || ''}` +
           `${(active && ` cui-call-control--active`) || ''}` +
           `${(className && ` ${className}`) || ''}`
         }
@@ -59,7 +59,7 @@ CallControl.propTypes = {
   /** @prop Optional numeric size prop for CallControl button | 56 */
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** @prop Optional predefined CallControl prop type | '' */
-  type: PropTypes.oneOf(['microphone-muted', 'cancel', 'camera-muted', 'share-screen', 'speaker']),
+  type: PropTypes.oneOf(['microphone-muted', 'cancel', 'camera-muted', 'camera', 'view-list', 'activities', 'more', 'handset', 'share-screen', 'speaker']),
 };
 
 CallControl.defaultProps = {
@@ -76,96 +76,194 @@ CallControl.defaultProps = {
 export default CallControl;
 
 /**
+* @name Default Call-Control
+* @description Default Call-Control.
+*
+* @category controls
 * @component call-control
 * @section default
-* @react
+*
+* @js
 import { CallControl } from '@collab-ui/react';
 
 export default function CallControlDefault() {
   return(
-      <div className='row'>
-        <div className="docs-example docs-example--spacing">
-          <CallControl
-            type='microphone-muted'
-            ariaLabel='For the Win'
-            size={20}
-            iconSize={10}
-          />
-        </div>
+    <div className='row'>
 
-        <div className="docs-example docs-example--spacing">
-          <CallControl
-            type='microphone-muted'
-            ariaLabel='For the Win'
-            size={40}
-            iconSize={16}
-          />
-        </div>
-
-        <div className="docs-example docs-example--spacing">
-          <CallControl
-            type='microphone-muted'
-            ariaLabel='For the Win'
-          />
-        </div>
+      <div className="docs-example docs-example--spacing">
+        <h3>
+          <p><code className="small">type=(microphone-muted)</code></p>
+          <p><code className="small">size=(20)</code></p>
+          <p><code className="small">iconSize=(10)</code></p>
+        </h3>
+        <CallControl
+          type='microphone-muted'
+          ariaLabel='For the Win'
+          size={20}
+          iconSize={10}
+        />
       </div>
+
+      <div className="docs-example docs-example--spacing">
+        <h3>
+          <p><code className="small">type=(microphone-muted)</code></p>
+          <p><code className="small">size=(40)</code></p>
+          <p><code className="small">iconSize=(16)</code></p>
+        </h3>
+        <CallControl
+          type='microphone-muted'
+          ariaLabel='For the Win'
+          size={40}
+          iconSize={16}
+        />
+      </div>
+
+      <div className="docs-example docs-example--spacing">
+        <h3>
+          <p><code className="small">type=(microphone-muted)</code></p>
+        </h3>
+        <CallControl
+          type='microphone-muted'
+          ariaLabel='For the Win'
+        />
+      </div>
+
+    </div>
   );
 }
 
 **/
 
 /**
+* @name Call-Control with active
+* @description Call control with active class.
+*
+* @category controls
 * @component call-control
 * @section active
-* @react
+*
+* @js
 import { CallControl } from '@collab-ui/react';
 
 export default function CallControlActive() {
   return(
-    <CallControl
-      type='microphone-muted'
-      active
-      onClick={() => { }}
-      ariaLabel='For the Win'
-    />
+    <div className='row'>
+
+      <div className="docs-example docs-example--spacing">
+        <h3>
+          <p><code className="small">active=(true)</code></p>
+        </h3>
+        <CallControl
+          type='microphone-muted'
+          active
+          onClick={() => {}}
+          ariaLabel='For the Win'
+        />
+      </div>
+      <div className="docs-example docs-example--spacing cui--contrast">
+        (With Contrast)
+        <h3>
+          <p><code className="small">active=(true)</code></p>
+        </h3>
+        <CallControl
+          type='microphone-muted'
+          active
+          onClick={() => {}}
+          ariaLabel='For the Win'
+        />
+      </div>
+
+    </div>
   );
 }
 
 **/
 
 /**
+* @name Call-Control with disable
+* @description Call-Control with disabled class.
+*
+* @category controls
 * @component call-control
 * @section disable
-* @react
+*
+* @js
 import { CallControl } from '@collab-ui/react';
 
 export default function CallControlDisabled() {
   return(
-    <CallControl
-      type='microphone-muted'
-      disabled
-      onClick={() => { }}
-      ariaLabel='For the Win'
-    />
+     <div className='row'>
+
+      <div className="docs-example docs-example--spacing">
+        <h3>
+          <p><code className="small">disabled=(true)</code></p>
+        </h3>
+        <CallControl
+          type='microphone-muted'
+          disabled
+          onClick={() => {}}
+          ariaLabel='For the Win'
+        />
+      </div>
+      <div className="docs-example docs-example--spacing cui--contrast">
+        (With Contrast)
+        <h3>
+          <p><code className="small">disabled=(true)</code></p>
+        </h3>
+        <CallControl
+          type='microphone-muted'
+          disabled
+          onClick={() => {}}
+          ariaLabel='For the Win'
+        />
+      </div>
+
+    </div>
   );
 }
 
 **/
 
 /**
+* @name Call-Control cancel
+* @description Call-Control with cancel class.
+*
+* @category controls
 * @component call-control
 * @section cancel
-* @react
+*
+* @js
 import { CallControl } from '@collab-ui/react';
 
 export default function CallControlCancel() {
   return(
-    <CallControl
-      type='cancel'
-      active
-      onClick={() => {}}
-      ariaLabel='For the Win'
-    />
+      <div className='row'>
+
+      <div className="docs-example docs-example--spacing">
+        <h3>
+          <p><code className="small">type=(cancel)</code></p>
+        </h3>
+        <CallControl
+          type='cancel'
+          active
+          onClick={() => {}}
+          ariaLabel='For the Win'
+        />
+      </div>
+      (With Contrast)
+      <div className="docs-example docs-example--spacing cui--contrast">
+        <h3>
+          <p><code className="small">type=(cancel)</code></p>
+        </h3>
+        <CallControl
+          type='cancel'
+          active
+          onClick={() => {}}
+          ariaLabel='For the Win'
+        />
+      </div>
+
+    </div>
   );
 }
 
